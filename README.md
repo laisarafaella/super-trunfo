@@ -9,11 +9,17 @@ O projeto foi desenvolvido em três níveis:
 
 # 🛠️ Funcionalidades
 ✔ Leitura de dados via teclado
+
 ✔ Armazenamento em variáveis apropriadas
+
 ✔ Cálculo da densidade populacional
+
 ✔ Cálculo do PIB per capita
+
 ✔ Cálculo do Super Poder
+
 ✔ Comparação automática dos atributos
+
 ✔ Exibição organizada dos resultados
 
 
