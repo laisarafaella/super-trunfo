@@ -18,6 +18,7 @@ int main() {
 
     int pontos_turisticos, pontos_turisticos2;
 
+    // talvez seja melhor, usar double?
     float area, pib;
     float area2, pib2;
 
@@ -143,6 +144,7 @@ int main() {
     printf("ÁREA: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("NÚMERO DE PONTOS TURÍSTICOS: %d\n", pontos_turisticos2);
+    //pode acontecer de a densidade retornar 0.00 por conta das casas decimais, verificar
     printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", densidade2);
     printf("PIB PER CAPITA: %.2f reais\n", capita2);
 
@@ -154,6 +156,7 @@ int main() {
 
 
     // Comparacao de atributos
+    // nao vai ser mais necessário
 
     resultadoPop = populacao > populacao2;
     resultadoArea = area > area2;
@@ -180,6 +183,19 @@ int main() {
     printf("Densidade Populacional: Carta 1 venceu (%d)\n", resultadoDensidade);
     printf("PIB per Capita: Carta 1 venceu (%d)\n", resultadoCapita);
     printf("Super Poder: Carta 1 venceu (%d)\n", resultadoSuper);
+
+
+
+    // COMPARACAO DE ATRIBUTO POPULACAO
+    printf("\nComparação de Cartas (Atributo - População)\n");
+    printf("Carta 1 - %s (%c): %lu\n", cidade, estado, populacao);
+    printf("Carta 2 - %s (%c): %lu\n", cidade2, estado2, populacao2);
+
+    if (populacao > populacao2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade);
+    } else {
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    }
 
     return 0;
 }
