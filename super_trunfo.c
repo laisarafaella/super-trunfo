@@ -46,8 +46,9 @@ int main() {
 
     // usar no switch
     int primeiroAtributo, segundoAtributo;
-
-    float soma;
+    float soma1, soma2;
+    float resultadoCarta1, resultadoCarta2;
+    float resultadoCarta3, resultadoCarta4;
 
 
     // CARTA 1
@@ -206,6 +207,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = populacao;
+        resultadoCarta2 = populacao2;
         break;
 
         case 3:
@@ -220,6 +224,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = area;
+        resultadoCarta2 = area2;
         break;
 
         case 4:
@@ -234,6 +241,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = pib;
+        resultadoCarta2 = pib2;
         break;
 
         case 5:
@@ -248,6 +258,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = pontos_turisticos;
+        resultadoCarta2 = pontos_turisticos2;
         break;
 
         case 6:
@@ -262,6 +275,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = densidade;
+        resultadoCarta2 = densidade2;
         break;
 
         case 7:
@@ -276,6 +292,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = capita;
+        resultadoCarta2 = capita2;
         break;
 
         case 8:
@@ -290,6 +309,9 @@ int main() {
         } else {
             printf("Empate!\n");
         }
+
+        resultadoCarta1 = superPoderA;
+        resultadoCarta2 = superPoderB;
         break;
 
         default:
@@ -311,6 +333,7 @@ int main() {
 
     if (primeiroAtributo == segundoAtributo) {
         printf("Você escolheu o mesmo atributo! Escolha outro!");
+        return 0;
     } else {
         switch (segundoAtributo) {
             case 1:
@@ -331,6 +354,9 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = populacao;
+            resultadoCarta4 = populacao2;
             break;
 
             case 3:
@@ -345,6 +371,9 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = area;
+            resultadoCarta4 = area2;
             break;
 
             case 4:
@@ -359,6 +388,9 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = pib;
+            resultadoCarta4 = pib2;
             break;
 
             case 5:
@@ -373,6 +405,9 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = pontos_turisticos;
+            resultadoCarta4 = pontos_turisticos2;
             break;
 
             case 6:
@@ -387,6 +422,9 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = densidade;
+            resultadoCarta4 = densidade2;
             break;
 
             case 7:
@@ -401,6 +439,9 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = capita;
+            resultadoCarta4 = capita2;
             break;
 
             case 8:
@@ -415,12 +456,29 @@ int main() {
             } else {
                 printf("Empate!\n");
             }
+
+            resultadoCarta3 = superPoderA;
+            resultadoCarta4 = superPoderB;
             break;
 
             default:
             printf("Atributo inválido!\n");
             break;
         }
+    }
+
+    // Soma dos Atributos
+    soma1 = resultadoCarta1 + resultadoCarta3;
+    soma2 = resultadoCarta2 + resultadoCarta4;
+
+    printf("\nSoma dos atributos:\n");
+    printf("Carta 1 - (%s): %.2f\n", cidade, soma1);
+    printf("Carta 2 - (%s): %.2f\n", cidade2, soma2);
+
+    if (soma1 == soma2) {
+        printf("Empate!\n");
+    } else {
+        printf("%s venceu a rodada!\n", (soma1 > soma2) ? cidade : cidade2);
     }
 
 
