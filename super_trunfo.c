@@ -13,12 +13,12 @@ int main() {
     char cidade[50];
     char cidade2[50];
 
-    // alterar para unsigned long int - numeros positivos maiores
+    // unsigned long int - numeros positivos maiores
     unsigned long int populacao, populacao2;
 
     int pontos_turisticos, pontos_turisticos2;
 
-    // talvez seja melhor, usar double?
+    // float / double
     float area, pib;
     float area2, pib2;
 
@@ -29,26 +29,11 @@ int main() {
     float superPoderA, superPoderB;
 
 
-
-    // exibir os resultados das comparacoes
-    // nao é mais necessario
-    // talvez usar na soma de atributos
-    /*
-    int resultadoPop;
-    int resultadoArea;
-    int resultadoPIB;
-    int resultadoPontos;
-    int resultadoDensidade;
-    int resultadoCapita;
-    int resultadoSuper;*/
-
-
-
     // usar no switch
     int primeiroAtributo, segundoAtributo;
     float soma1, soma2;
-    float resultadoCarta1, resultadoCarta2;
-    float resultadoCarta3, resultadoCarta4;
+    float atributo1Carta1, atributo1Carta2;
+    float atributo2Carta1, atributo2Carta2;
 
 
     // CARTA 1
@@ -208,8 +193,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = populacao;
-        resultadoCarta2 = populacao2;
+        atributo1Carta1 = populacao;
+        atributo1Carta2 = populacao2;
         break;
 
         case 3:
@@ -225,8 +210,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = area;
-        resultadoCarta2 = area2;
+        atributo1Carta1 = area;
+        atributo1Carta2 = area2;
         break;
 
         case 4:
@@ -242,8 +227,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = pib;
-        resultadoCarta2 = pib2;
+        atributo1Carta1 = pib;
+        atributo1Carta2 = pib2;
         break;
 
         case 5:
@@ -259,8 +244,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = pontos_turisticos;
-        resultadoCarta2 = pontos_turisticos2;
+        atributo1Carta1 = pontos_turisticos;
+        atributo1Carta2 = pontos_turisticos2;
         break;
 
         case 6:
@@ -276,8 +261,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = densidade;
-        resultadoCarta2 = densidade2;
+        atributo1Carta1 = densidade;
+        atributo1Carta2 = densidade2;
         break;
 
         case 7:
@@ -293,8 +278,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = capita;
-        resultadoCarta2 = capita2;
+        atributo1Carta1 = capita;
+        atributo1Carta2 = capita2;
         break;
 
         case 8:
@@ -310,8 +295,8 @@ int main() {
             printf("Empate!\n");
         }
 
-        resultadoCarta1 = superPoderA;
-        resultadoCarta2 = superPoderB;
+        atributo1Carta1 = superPoderA;
+        atributo1Carta2 = superPoderB;
         break;
 
         default:
@@ -332,7 +317,8 @@ int main() {
     scanf("%d", &segundoAtributo);
 
     if (primeiroAtributo == segundoAtributo) {
-        printf("Você escolheu o mesmo atributo! Escolha outro!");
+        printf("Você escolheu o mesmo atributo!\n");
+        printf("Reinicie o programa e escolha outro atributo!\n");
         return 0;
     } else {
         switch (segundoAtributo) {
@@ -355,8 +341,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = populacao;
-            resultadoCarta4 = populacao2;
+            atributo2Carta1 = populacao;
+            atributo2Carta2 = populacao2;
             break;
 
             case 3:
@@ -372,8 +358,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = area;
-            resultadoCarta4 = area2;
+            atributo2Carta1 = area;
+            atributo2Carta2 = area2;
             break;
 
             case 4:
@@ -389,8 +375,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = pib;
-            resultadoCarta4 = pib2;
+            atributo2Carta1 = pib;
+            atributo2Carta2 = pib2;
             break;
 
             case 5:
@@ -406,8 +392,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = pontos_turisticos;
-            resultadoCarta4 = pontos_turisticos2;
+            atributo2Carta1 = pontos_turisticos;
+            atributo2Carta2 = pontos_turisticos2;
             break;
 
             case 6:
@@ -423,8 +409,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = densidade;
-            resultadoCarta4 = densidade2;
+            atributo2Carta1 = densidade;
+            atributo2Carta2 = densidade2;
             break;
 
             case 7:
@@ -440,8 +426,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = capita;
-            resultadoCarta4 = capita2;
+            atributo2Carta1 = capita;
+            atributo2Carta2 = capita2;
             break;
 
             case 8:
@@ -457,8 +443,8 @@ int main() {
                 printf("Empate!\n");
             }
 
-            resultadoCarta3 = superPoderA;
-            resultadoCarta4 = superPoderB;
+            atributo2Carta1 = superPoderA;
+            atributo2Carta2 = superPoderB;
             break;
 
             default:
@@ -468,67 +454,20 @@ int main() {
     }
 
     // Soma dos Atributos
-    soma1 = resultadoCarta1 + resultadoCarta3;
-    soma2 = resultadoCarta2 + resultadoCarta4;
+    soma1 = atributo1Carta1 + atributo2Carta1;
+    soma2 = atributo1Carta2 + atributo2Carta2;
 
     printf("\nSoma dos atributos:\n");
     printf("Carta 1 - (%s): %.2f\n", cidade, soma1);
     printf("Carta 2 - (%s): %.2f\n", cidade2, soma2);
 
+    // se as somas forem iguais, ocorre empate
+    // se não, vence a carta com a maior soma de atributos
     if (soma1 == soma2) {
         printf("Empate!\n");
     } else {
         printf("%s venceu a rodada!\n", (soma1 > soma2) ? cidade : cidade2);
     }
-
-
-    // Tratar a soma da rodada
-
-
-
-    // Comparacao de atributos
-    // nao vai ser mais necessário
-
-    /*
-    resultadoPop = populacao > populacao2;
-    resultadoArea = area > area2;
-    resultadoPIB = pib > pib2;
-    resultadoPontos = pontos_turisticos > pontos_turisticos2;
-
-    // densidade é diferente: menor vence 
-    resultadoDensidade = densidade < densidade2;
-
-    resultadoCapita = capita > capita2;
-    resultadoSuper = superPoderA > superPoderB;
-
-
-
-    // EXIBICAO DOS RESULTADOS DA COMPARACAO
-    // depois refatorar
-
-    printf("\nCOMPARAÇÃO DE CARTAS:\n");
-    printf("Se Carta 1 vencer, retona 1 e se a Carta 2 vencer, retorna 0\n");
-    printf("População: Carta 1 venceu (%d)\n", resultadoPop);
-    printf("Área: Carta 1 venceu (%d)\n", resultadoArea);
-    printf("PIB: Carta 1 venceu (%d)\n", resultadoPIB);
-    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", resultadoPontos);
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", resultadoDensidade);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", resultadoCapita);
-    printf("Super Poder: Carta 1 venceu (%d)\n", resultadoSuper);
-
-
-
-    // COMPARACAO DE ATRIBUTO POPULACAO
-    printf("\nComparação de Cartas (Atributo - População)\n");
-    printf("Carta 1 - %s (%c): %lu\n", cidade, estado, populacao);
-    printf("Carta 2 - %s (%c): %lu\n", cidade2, estado2, populacao2);
-
-    if (populacao > populacao2) {
-        printf("Resultado: Carta 1 (%s) venceu!\n", cidade);
-    } else {
-        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
-    }
-        */
 
     return 0;
 }
